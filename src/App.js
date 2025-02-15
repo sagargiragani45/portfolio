@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { animated, useSpring } from 'react-spring';
+import Header from './components/Header';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
+  const [theme, setTheme] = useState('dark');
+
+  const themeStyles = useSpring({
+    backgroundColor: theme === 'dark' ? '#1e1e2f' : '#f4f4f4',
+    color: theme === 'dark' ? '#fff' : '#333',
+  });
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <animated.div className="portfolio" style={themeStyles}>
+      <Header theme={theme} toggleTheme={toggleTheme} />
+      <Skills />
+      <Projects />
+      <Experience />
+      <Contact />
+      <Footer />
+    </animated.div>
   );
 }
 

@@ -1,0 +1,46 @@
+.header {
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+
+.header h1 {
+  font-size: 3rem;
+  margin: 0;
+  color:#fff;
+}
+
+.header p {
+  font-size: 1.2rem;
+  margin: 10px 0 0;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.contact-info i {
+  margin-right: 10px;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: 20px;
+}
