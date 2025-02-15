@@ -10,7 +10,7 @@ const Header = ({ theme, toggleTheme }) => {
         <h1>GIRAGANI SAGAR</h1>
         <p>Azure DevOps Engineer | Cloud Specialist | Automation Enthusiast</p>
         <div className="contact-info">
-          <p><i className="fas fa-phone"></i> +91-63001758608</p>
+          <p><i className="fas fa-phone"></i> +91-6301758608</p>
           <p><i className="fas fa-envelope"></i> sagargoud2606@gmail.com</p>
         </div>
         <button onClick={toggleTheme} className="theme-toggle">
